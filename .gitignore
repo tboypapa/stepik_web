@@ -114,3 +114,5 @@ fabric.properties
 .idea/
 __pycache__/
 *.sqlite3
+venv/
+migrations/
