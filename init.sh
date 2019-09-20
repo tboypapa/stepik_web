@@ -7,4 +7,6 @@ python3 ~/web/ask/manage.py migrate qa
 sudo ln -sf /home/box/web/etc/gunicorn.conf /etc/gunicorn.d/test
 sudo ln -sf /home/box/web/etc/gunicorn-django.conf /etc/gunicorn.d/test-django
 sudo /etc/init.d/gunicorn restart
+cd web/ask
+sudo gunicorn --bind 0.0.0.0:8000 ask.wsgi:application &
 curl localhost:8000
