@@ -7,7 +7,7 @@
 <body>
     <h1>{{ title }}</h1>
     {% for question in questions %}
-        <p><a href="{{ question.get_url }}">{{ question.title }}</a></p>
+        <p><a href="{{ question.get_url }}">{{ question.title }}</a>({{ question.rating }} and {{ question.added_at }})</p>
     {% endfor %}
 </body>
 </html>
