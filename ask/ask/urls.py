@@ -16,14 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import include, url
 from . import views
-from qa.views import index, popular
+from qa.views import index, popular, ask
 
 
 urlpatterns = [
     url(r'^$', index),
     url(r'^login/', views.test),
     url(r'^signup/', views.test),
-    url(r'^ask/', views.test),
+    url(r'^ask/', ask),
     url(r'^popular/', popular),
     url(r'^new/', index),
 
