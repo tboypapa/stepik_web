@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class QuestionManager(models.Manager):
     def new(self):
-        return self.order_by('-added_at')
+        return self.order_by('added_at')
 
     def popular(self):
         return self.order_by('-rating')
@@ -24,7 +24,7 @@ class Question(models.Model):
         return self.title
 
     def get_url(self):
-        return reverse('qa:question', kwargs={'idk': self.id})
+        return "/question/{}/".format(self.id)
 
 
 class Answer(models.Model):
