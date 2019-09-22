@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import include, url
 from . import views
-from qa.views import index, popular, ask, signup, login
+from qa.views import index, popular, ask, signup, login_view
 
 
 urlpatterns = [
     url(r'^$', index),
-    url(r'^login/', login),
+    url(r'^login/', login_view),
     url(r'^signup/', signup),
     url(r'^ask/', ask),
     url(r'^popular/', popular),
