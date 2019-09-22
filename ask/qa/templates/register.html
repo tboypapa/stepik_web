@@ -2,20 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ask a new question</title>
+    <title>Register</title>
 </head>
 <body>
-    <div>User: {{ user }}</div>
-    <div>Session: {{ session }}</div>
-    <hr>
-    <form method="post" action="/ask/">
+    <form method="post" action="/signup/">
         <fieldset>
             {% csrf_token %}
             {{ form.as_p }}
         </fieldset>
-        <button type="submit">Сохранить</button>
+        <button type="submit">Зарегистрироваться</button>
     </form>
-    <hr>
     <div><a href="/">Вернуться</a></div>
 </body>
 </html>
